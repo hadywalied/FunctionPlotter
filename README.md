@@ -1,4 +1,4 @@
-![Function Plotter](C:\Users\himep\PycharmProjects\PyPlotter\logo.png)
+![Function Plotter](https://github.com/hadywalied/FunctionPlotter/blob/master/logo.png)
 
 # **Function Plotter**
 
