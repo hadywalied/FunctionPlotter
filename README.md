@@ -27,7 +27,7 @@ run the test by using the test suite in PyCharm or by simply running
 
 **the main interface:**
 
-![image-20210422232128955](C:\Users\himep\AppData\Roaming\Typora\typora-user-images\image-20210422232128955.png)
+![image-20210422232128955](https://github.com/hadywalied/FunctionPlotter/blob/master/Screenshots/image-20210422232128955.png)
 
 ### Plotting
 
@@ -37,14 +37,14 @@ $$
 
 **from x = -10 to x = 10** :
 
-![image-20210422232513752](C:\Users\himep\AppData\Roaming\Typora\typora-user-images\image-20210422232513752.png)
+![image-20210422232513752](https://github.com/hadywalied/FunctionPlotter/blob/master/Screenshots/image-20210422232513752.png)
 
 trying an wrong equation will result in an error, which is demonstrated below.
 
 ### Plotting f(x) = xz
 
-![image-20210422232822455](C:\Users\himep\AppData\Roaming\Typora\typora-user-images\image-20210422232822455.png)
+![image-20210422232822455](https://github.com/hadywalied/FunctionPlotter/blob/master/Screenshots/image-20210422232822455.png)
 
 sure we must leave a hint for the user to correct the Error
 
-![image-20210422232852232](C:\Users\himep\AppData\Roaming\Typora\typora-user-images\image-20210422232852232.png)
+![image-20210422232852232](https://github.com/hadywalied/FunctionPlotter/blob/master/Screenshots/image-20210422232852232.png)
