@@ -1,4 +1,6 @@
-pyside2
-matplotlib
-numpy
-sympy
+pyside2~=5.15.2
+matplotlib~=3.4.1
+numpy~=1.20.2
+sympy~=1.8
+pytest-qt
+pytest~=6.2.3

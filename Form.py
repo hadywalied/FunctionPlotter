@@ -26,11 +26,12 @@ class Canvas(FigureCanvas):
         super(Canvas, self).__init__(fig)
 
 
-class Form(QFormLayout):
+class Form(QWidget):
     def __init__(self):
         super(Form, self).__init__()
 
         # generate the canvas to display the plot
+        self.msg = QMessageBox()
         self.canvas = Canvas()
         pixmap = QPixmap("logo.png")
         self.Title = QLabel()
@@ -101,7 +102,10 @@ class Form(QFormLayout):
                 self.canvas.axes.set_ylabel('f(x)')
                 self.canvas.draw()
             except Exception as e:
-                self.handle_error('wrong equation')
+                if str(e) == "In RendererAgg: Out of memory":
+                    pass
+                else:
+                    self.handle_error('wrong equation')
         else:
             self.handle_error('empty equation')
 
@@ -125,14 +129,13 @@ class Form(QFormLayout):
             self.handle_error('wrong equation')
 
     def handle_error(self, err):
-        msg = QMessageBox()
-        msg.setIcon(QMessageBox.Critical)
+        self.msg.setIcon(QMessageBox.Critical)
 
-        msg.setText("Error")
-        msg.setInformativeText(str(err))
-        msg.setWindowTitle("Error")
-        msg.setDetailedText(
+        self.msg.setText("Error")
+        self.msg.setInformativeText(str(err))
+        self.msg.setWindowTitle("Error")
+        self.msg.setDetailedText(
             "Hint: \nthe equation must be a function of (x) \ne.g. x^2 or sin(x) or ln(x) or exp(x)")
-        msg.setStandardButtons(QMessageBox.Ok)
+        self.msg.setStandardButtons(QMessageBox.Ok)
 
-        retval = msg.exec_()
+        retval = self.msg.exec_()
