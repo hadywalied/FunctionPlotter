@@ -91,6 +91,10 @@ class Form(QWidget):
         if equation != '':
             if x1 == '' and x2 == '':
                 x_vals, y_vals = self.generate_data(equation)
+            elif x1 == '':
+                x_vals, y_vals = self.generate_data(equation, x2=int(x2))
+            elif x2 == '':
+                x_vals, y_vals = self.generate_data(equation, x1=int(x1))
             else:
                 x_vals, y_vals = self.generate_data(equation, int(x1), int(x2))
             print(x_vals, y_vals)
