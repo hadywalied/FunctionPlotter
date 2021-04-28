@@ -1,3 +1,5 @@
+from equation_parsing import translate
+
 import matplotlib
 import numpy as np
 from PySide2.QtGui import *
@@ -8,8 +10,6 @@ from sympy import *
 from PySide2.QtCore import Qt
 
 matplotlib.use('Qt5Agg')  # Render to PySide/PyQt Canvas
-
-from equation_parsing import translate
 
 
 class Canvas(FigureCanvas):
